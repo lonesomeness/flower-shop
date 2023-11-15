@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --color-primary: #c1dcdc;
+    --color-dark-1: #1e1e1e;
+    --color-dark-2: #6d6d6d;
+    ---font-primary: 'Poppins', sans-serif;
+    --font-logo: 'Poppins', sans-serif;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(---font-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.section {
+    padding-top: 100px;
+}
+
+/* Панель навигации navbar */
+.nav {
+    width: 100%;
+    height: 100px;
+}
+
+.nav_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+}
+
+.nav_logo {
+    font-size: 24px;
+    font-family: var(--font-logo);
+    color: var(--color-dark-1);
+    font-weight: 700;
+}
+
+.nav_list {
+    display: flex;
+    margin-left: 30px;
+}
+
+.nav_items {
+    margin: 0px 6px;
+}
+
+.nav_link {
+    padding: 7px 10px;
+    color: var(--color-dark-2);
+    font-weight: 500;
+}
+
+.active {
+    color: var(--color-dark-1);
+}
+
+.nav_icon {
+    margin: 0px 0px 0px 25px;
+}
+
+
+/* header */
+.header_container {
+    width: 100%;
+    height: 465px;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+}
+
+.header_content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: center;  
+    padding: 0px 50px;
+}   
+
+.headet_main_title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 60px;
+}
+
+.header_items {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.header_item:not(:first-child) {
+    margin-left: 30px;
+}
+
+.header_item_number {
+    font-size: 30px;
+}
+
+.header_form {
+    padding: 10px;
+    background-color: #f3f3f3;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_form_input {
+    padding: 7px 10px;
+    width: 250px;
+    outline: none;
+    border: none;
+    background-color: #f3f3f3; 
+}
+
+.header_form_icon {
+   padding: 7px;
+   background-color: var(---font-primary);
+   border-radius: 2px; 
+}
