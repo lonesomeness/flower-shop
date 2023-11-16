@@ -266,7 +266,7 @@ a {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 20px; 
 }
 
 .category_img {
@@ -305,3 +305,79 @@ a {
     color: var(--color-dark-1);
     border-radius: 2px;
 }
+
+.category_title {       
+    color: black; 
+    transition: color 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.category_title:hover {
+    color: #6d6d6d; 
+    opacity: 0.8;
+}
+
+/* Отзывы */
+.review {
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    padding: 60px 100px;
+}
+
+.review_text {
+    margin-bottom: 30px;
+}
+
+.review_footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review_rating {
+    display: flex;
+}
+
+.review_rating > svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+.footer {
+    margin-top: 120px;
+    background-color: var(--color-primary);
+  }
+  .footer_container {
+    padding: 40px 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 40px;
+  }
+  .footer_item_title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .footer_copy {
+    padding: 10px 0px;
+  }
+  
