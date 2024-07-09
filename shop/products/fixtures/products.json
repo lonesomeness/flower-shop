@@ -1,0 +1,122 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "name": "Penny Lane",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "30000.00",
+            "image": "products_images/selling-2_EuzTdZ0.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "name": "Newbury",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "18900.00",
+            "image": "products_images/selling-1.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "name": "J Street",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "14000.00",
+            "image": "products_images/selling-3.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "name": "Sweet Nancy",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "7200.00",
+            "image": "products_images/img-1.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "name": "Mixed Tulips",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "4800.00",
+            "image": "products_images/img-2.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "name": "Sunshine In Bloom",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "6900.00",
+            "image": "products_images/img-3.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "name": "Fascination",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "9100.00",
+            "image": "products_images/img-4_anVSOTa.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "name": "Park Avenue",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "28000.00",
+            "image": "products_images/img-5.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "name": "Igor's special",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "700.00",
+            "image": "products_images/img-6.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "name": "Baby's Breath In A Vase",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "3300.00",
+            "image": "products_images/img-7.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "name": "Roses Delight",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "4500.00",
+            "image": "products_images/img-8.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "name": "120 Pink, Red And White Tulips",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            "price": "21000.00",
+            "image": "products_images/img-9.jpg"
+        }
+    }
+]

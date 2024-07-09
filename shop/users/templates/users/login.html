@@ -1,0 +1,21 @@
+{% extends 'products/base.html' %}
+
+{% block title %}Вход в систему - Floritta Shop{% endblock %}
+
+{% block content %}
+    <section class="login-section">
+        <div class="container">
+            <h2>Вход в систему</h2>
+            <form method="post" class="login-form" action="{% url 'users:login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% comment %} <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required> {% endcomment %}
+                <button type="submit">Войти</button>
+            </form>
+            <p>Не зарегистрировались? <a href="{% url 'users:register' %}">Зарегистрируйтесь</a></p>
+        </div>  
+    </section>
+{% endblock %}

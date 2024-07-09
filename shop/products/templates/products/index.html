@@ -1,0 +1,237 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+
+{% block title %}Главная - Floritta Shop{% endblock %}
+
+{% block home_active %}active{% endblock %}
+
+{% block content %}
+ <div class="container header_container">
+        <div class="header_content">
+            <div class="wrapper">
+                <h1 class="headet_main_title">Магазин цветов <Br> Floritta</h1>
+                <div class="header_items">
+                    <div class="header_item">
+                        <p class="header_item_number">50+ </p>
+                        <p class="header_item_text">Видов цветов</p>
+                    </div>
+                    <div class="header_item">
+                        <p class="header_item_number">100+ </p>
+                        <p class="header_item_text">Покупателей</p>
+                    </div>
+                </div>
+                <form action="#" class="header_form">
+                    <input type="text" class="header_form_input" placeholder="Что вы хотите найти?">
+                    <img src="{% static 'images/search.png' %}" alt="" class="header_form_icon">
+                </form>
+            </div>
+            <div class="wrapper"></div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container selling_container">
+            <div class="selling_item">
+                <h2 class="selling_h2">Элегантные бестселлеры</h2>
+                <p class="selling_p">Насладитесь великолепием и свежестью в каждом букете, созданном с любовью и заботой.
+                </p>
+                <a href="{% url 'products:index' %}" class="selling_button">Посмотреть больше &rarr;</a>
+            </div>
+        <a href="#" class="selling_item_link">
+            <div class="selling_item">
+                <img src="{% static 'images/selling-1.jpg' %}" alt="" class="selling_item_img">
+                <p class="selling_item_title">Newbury</p>
+                <p class="selling_item_price">18 900₽</p>
+            </div>
+        </a>
+        <a href="#" class="selling_item_link">
+            <div class="selling_item">
+                <img src="{% static 'images/selling-2.jpg' %}" alt="" class="selling_item_img">
+                <p class="selling_item_title">Penny Lane</p>
+                <p class="selling_item_price">30 000₽</p>
+            </div>
+        </a>
+        <a href="#" class="selling_item_link">
+            <div class="selling_item">
+                <img src="{% static 'images/selling-3.jpg' %}" alt="" class="selling_item_img">
+                <p class="selling_item_title">J Street</p>
+                <p class="selling_item_price">14 000₽</p>
+            </div>
+        </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_h2">О нас</h2>
+                <p class="section_p">Закажите сейчас и оцените красоту природы.</p>
+            </div>
+            <div class="about_container">
+                <div class="about_item">
+                <div class="about_img_box">
+                    <img src="{% static 'images/florist.png' %}" alt="" class="about_item_img">
+                </div>
+                <h4 class="about_item_title">Большой выбор</h4>
+                <p class="about_item_text">Наслаждайтесь разнообразием природной красоты.
+                </p>
+                </div>
+                <div class="about_item">
+                <div class="about_img_box">
+                    <img src="{% static 'images/delivery.png' %}" alt="" class="about_item_img">
+                </div>
+                <h4 class="about_item_title">Быстрая и бесплатная доставка</h4>
+                <p class="about_item_text">Бесплатная доставка, быстро и надежно. Возможна экспресс-доставка.
+                </p>
+                </div>
+                <div class="about_item">
+                    <div class="about_img_box">
+                    <img src="{% static 'images/support.png' %}" alt="" class="about_item_img">
+                </div>
+                <h4 class="about_item_title">Поддержка 24/7</h4>
+                <p class="about_item_text">Вопросы? Мы здесь 24/7. Решим быстро, как наши доставки.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_h2">Категории</h2>
+                <p class="section_p">Откройте мир цветов</p>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="container cat_container">
+            <a href="#">
+                <div class="category">
+                    <img src="{% static 'images/category-1.jpg' %}" alt="" class="category_img">
+                    <p class="category_title">Букеты</p>
+                </div>
+                </a>
+                <a href="#">
+                <div class="category category_center">
+                    <img src="{% static 'images/category-2.jpg' %}" alt="" class="category_img">
+                    <p class="category_title">Цветы в корзинах</p>
+                </div>
+                </a>
+                <a href="#">
+                <div class="category">
+                    <img src="{% static 'images/category-3.jpg' %}" alt="" class="category_img">
+                    <p class="category_title">В конвертах   </p>
+                </div>
+                </a>
+            </div>
+            <div class="container categories_bottom">
+                <p class="categories_p">Изысканные композиции для каждого момента вашей жизни. Найдите идеальный букет, который вы ищете.
+                </p>
+                <a href="{% url 'products:index' %}" class="categories_btn">Посмотреть больше &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section_header">
+                <h2 class="section_h2">Что говорят покупатели о <br /> FLORITTA?</h2>
+            </div>
+            <div class="reviews">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p class="review_text">
+                            Волшебный опыт! Этот цветочный магазин - настоящая находка.
+                            Букет, который я заказал, был просто великолепен.
+                            Цветы свежие, аранжировка безупречна. Обслуживание на высшем уровне, персонал дружелюбный и профессиональный.
+                            Рад, что нашел это место, и теперь я знаю, где заказывать цветы для всех особых случаев. Благодарю вас за ваше волшебство!
+                        </p>
+                        <div class="review_footer">
+                          <div class="review_user">
+                            <h3 class="review_user_name">Вадим Тимергалеев</h3>
+                            <p class="review_user_designation">Студент</p>
+                          </div>
+                          <h3 class="review_rating">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-6 h-6">
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                            <span>5</span>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p class="review_text">
+                            Хороший выбор, но есть небольшие недочеты. Заказывал цветы для свадьбы, и хотя букет был красивым, заметил несколько увядших лепестков.
+                            Доставка была вовремя, и обслуживание было дружелюбным. В целом, я доволен, но уверен, что могло бы быть еще лучше. Надеюсь, магазин учтет это в будущем.
+                            <br>
+                            <br>
+                        </p>
+                        <div class="review_footer">
+                          <div class="review_user">
+                            <h3 class="review_user_name">Андрей Ледовский</h3>
+                            <p class="review_user_designation">Конферансье</p>
+                          </div>
+                          <h3 class="review_rating">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-6 h-6">
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                            <span>4</span>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p class="review_text">
+                            Когда я получил букет от этого магазина, я почувствовал себя как герой романтической комедии! Цветы были упакованы так, будто они сами хотели завести свой Instagram аккаунт.
+                            При доставке курьер был настолько шармантлив, что я почти предложил ему свою руку. В итоге, цветы принесли радость и смех.
+                            Если вы ищете не только красоту, но и приключение, этот магазин - ваш выбор!
+                        </p>
+                        <div class="review_footer">
+                          <div class="review_user">
+                            <h3 class="review_user_name">Игорь Мироненко</h3>
+                            <p class="review_user_designation">Актер</p>
+                          </div>
+                          <h3 class="review_rating">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-6 h-6">
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd" />
+                            </svg>
+                            <span>5+</span>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+{% endblock %}

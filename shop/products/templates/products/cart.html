@@ -1,0 +1,55 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block title%}Корзина{% endblock %}
+
+{% block content %}
+{% if cart %}
+<section class="cart-section">
+    <div class="container">
+        <h1 class="section_h2">Корзина</h1>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                    <th>Всего</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user_cart in cart %}
+                <tr>
+                    <td>{{ user_cart.product.name }}</td>
+                    <td>{{ user_cart.product.price }} ₽</td>
+                    <td>{{ user_cart.quantity }}</td>
+                    <td>{{ user_cart.sum }} ₽</td>
+                    <td>
+                        <a class="remove-from-cart" href="{% url 'products:cart_remove' user_cart.id %}">
+                            -
+                            <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <p>Итого: <span>{{ total_sum }} руб</span></p>
+            <form method="post" action="{% url 'products:create_order' %}">
+                {% csrf_token %}
+                <button type="submit" class="button">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="cart-section">
+    <div class="container">
+        <h1 class="section_h2">Корзина</h1>
+        <p class="empty-cart-message">Ваша корзина пуста</p>
+        <a href="{% url 'products:index' %}" class="button">Перейти к покупкам</a>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
