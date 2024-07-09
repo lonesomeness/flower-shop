@@ -1,0 +1,164 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block title %}Floritta Shop{% endblock %}
+
+{% block about_active %}active{% endblock %}
+
+{% block content %}
+      <section class="questions faq_section" id="faqs">
+         <h2 class="section__title-center questions__title faq_container">
+            Некоторые часто задаваемые <br> вопросы о наших услугах и букетах
+         </h2>
+         <div class="questions__container faq_container grid">
+            <div class="questions__group">
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                        Могу ли я заказать букет заранее и выбрать дату доставки?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      Да, конечно! Вы можете оформить заказ заранее и указать удобную для вас дату доставки при оформлении заказа. Мы
+                      постараемся сделать все возможное, чтобы ваш букет был вовремя.
+                     </p>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                      Каковы ваши опции доставки и стоимость?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      Мы предлагаем различные варианты доставки, включая стандартную и экспресс-доставку. Стоимость зависит от выбранного вами
+                      варианта и места доставки. Подробную информацию вы можете найти при оформлении заказа.
+                     </p>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                      Могу ли я добавить персональное пожелание к моему заказу?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      Конечно! При оформлении заказа у вас будет возможность добавить персональное пожелание. Мы с удовольствием вложим его в
+                      ваш букет.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="questions__group">
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                      Каков процесс ухода за цветами после их доставки?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      После получения цветов рекомендуем поместить их в воду с добавлением питательных веществ, предоставленных в комплекте.
+                      Убедитесь, что вода чиста, и регулярно обрезайте концы стеблей. Избегайте прямого солнечного света и сквозняков для
+                      продления свежести вашего букета.
+                     </p>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                      Что делать, если я не удовлетворен(-а) качеством цветов?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      Мы гарантируем высокое качество наших цветов. Если у вас возникнут проблемы, свяжитесь с нами в течение 24 часов после
+                      получения заказа, и мы постараемся решить ситуацию или предложим замену. Ваше удовлетворение важно для нас!
+                     </p>
+                  </div>
+               </div>
+               <div class="questions__item">
+                  <header class="questions__header">
+                     <i class="ri-add-line questions__icon"></i>
+                     <h3 class="questions__item-title">
+                      Могу ли я заказать цветы для мероприятия или свадьбы?
+                     </h3>
+                  </header>
+                  <div class="questions__content">
+                     <p class="questions__description">
+                      Конечно! Мы специализируемся на создании красивых цветочных композиций для мероприятий, свадеб и других особых случаев.
+                      Свяжитесь с нами заранее, чтобы обсудить ваши пожелания и создать неповторимый букет или декор для вашего события.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="contact contact_section contact_container" id="contact">
+         <div class="contact__container grid">
+            <div class="contact__box">
+               <h2 class="section__title">
+                  Связь с нами
+               </h2>
+               <div class="contact__data">
+                  <div class="contact__information">
+                     <h3 class="contact__subtitle">Адрес и контактный телефон</h3>
+                     <span class="contact__description">
+                      <i class="ri-building-line"></i>
+                      Санкт-Петербург, Колокольная ул., 15/21
+                     </span>
+                     <span class="contact__description">
+                     <i class="ri-phone-line contact__icon"></i>
+                     +7 (951) 685-11-799
+                     </span>
+
+                  </div>
+                  <div class="contact__information">
+                     <h3 class="contact__subtitle">Электронная почта</h3>
+                     <span class="contact__description">
+                     <i class="ri-mail-line contact__icon"></i>
+                     floritta@gmail.com
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <form action="" class="contact__form">
+               <div class="contact__inputs">
+                  <div class="contact__content">
+                     <input type="email" placeholder=" " class="contact__input">
+                     <label for="" class="contact__label">Email</label>
+                  </div>
+                  <div class="contact__content">
+                     <input type="text" placeholder=" " class="contact__input">
+                     <label for="" class="contact__label">Имя</label>
+                  </div>
+                  <div class="contact__content contact__area">
+                     <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                     <label for="" class="contact__label">Сообщение</label>
+                  </div>
+               </div>
+               <button class="button button--flex">
+               Отправить сообщение
+               <i class="ri-arrow-right-up-line button__icon"></i>
+               </button>
+            </form>
+         </div>
+      </section>
+{% endblock %}
+
+{% block extra_js %}
+<script
+         src="https://kit.fontawesome.com/64d58efce2.js"
+         crossorigin="anonymous"
+         ></script>
+<script src="{% static 'app.js' %}"></script>
+{% endblock %}

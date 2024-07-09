@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Floritta Shop{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container nav_container">
+            <div class="nav_left">
+                <a href="{% url 'index' %}" class="nav_logo">FLORITTA</a>
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="{% url 'index' %}" class="nav_link {% block home_active %}{% endblock %}">Главная</a>
+                    </li>
+                    <li class="nav_item"><a href="{% url 'products:index' %}" class="nav_link {% block products_active %}{% endblock %}">Продукты</a></li>
+                    <li class="nav_item"><a href="{% url 'about' %}" class="nav_link {% block about_active %}{% endblock %}">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="nav_right">
+                <a href="{% url 'products:cart' %}">
+                    <img src="{% static 'images/cart.png' %}" alt="Корзина" class="nav_icon">
+                </a>
+                {% if user.is_authenticated == True %}
+                <a href="{% url 'users:profile' %}">
+                    <img src="{% static 'images/user.png' %}" alt="Авторизация" class="nav_icon">
+                {% else %}
+                <a href="{% url 'users:login' %}">
+                    <img src="{% static 'images/user.png' %}" alt="Авторизация" class="nav_icon">
+                {% endif %}
+                </a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'users:logout' %}">
+                    Выйти
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="container footer_container">
+            <div class="footer_item">
+                <h2 class="nav_logo">FLORITTA</h2>
+                <p class="footer_p">
+                  Поднимите свои моменты с самыми свежими и изысканными букетами.
+                </p>
+            </div>
+            <div class="footer_item">
+                <div class="footer_item_title">Информация</div>
+                <ul class="footer_list">
+                    <li class="footer_list_item">О нас</li>
+                    <li class="footer_list_item">Продукция</li>
+                    <li class="footer_list_item">Блог</li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <div class="footer_item_title">Компания</div>
+                <ul class="footer_list">
+                    <li class="footer_list_item">Сообщество</li>
+                    <li class="footer_list_item">Карьера</li>
+                    <li class="footer_list_item">Наша История</li>
+                </ul>
+            </div>
+            <div class="footer_item">
+                <div class="footer_item_title">Контакты</div>
+                <ul class="footer_list">
+                    <li class="footer_list_item">Начало работы</li>
+                    <li class="footer_list_item">Ценообразование</li>
+                    <li class="footer_list_item">Ресурсы</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer_copy">
+            <p>2024 Все права защищены | Условия использования | FLORITTA</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'src/style.css' %}">
+{% endblock %}
+
+{% block title %}Floritta shop{% endblock %}
+{% block products_active %}active{% endblock %}
+
+{% block content %}
+<div class="shop" id="shop">
+    {% for product in products %}
+        <div id="product-id-{{ product.id }}" class="item">
+            <img width="220" src="{{ product.image.url }}" alt="{{ product.name }}">
+            <div class="details">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <div class="price-quantity">
+                    <h2>{{ product.price }} ₽</h2>
+                    <a class="add-to-cart" href="{% url 'products:cart_add' product.id %}">
+                        +
+                        <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
